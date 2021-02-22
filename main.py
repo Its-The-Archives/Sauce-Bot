@@ -63,6 +63,18 @@ async def on_message(message):
     await message.channel.send("Destiny? Did someone say Destiny? That game that Sam and Schnieds *still* play? I mean how the **FUCK** can you play the same game for 3000+ hours!? The game isn't even that good anymore. Opulence was the peak of that damn game and you know it. It's just a bullshit game where all the good shit you get gets sent to the Aether a few months from when you get it. The game isn't even original anymore. Might as well call it 'Destiny 1: Remastered' or 'Destiny 1: Deluxe'. Just play a better fucking game already. You know what? It doesn't even have to be a better game at this point. Just play something fucking *different*.")
   if message.content.startswith('+help'):
     await message.channel.send("+help brings up this help screen\n if anyone says 'Destiny', makes fun of Sam and Schnieds\n if anyone says 'macaroni', says with the chicken strips\n if anyone says the n-word, says Nial\n if anyone says 'Sauce?', gives random nhentai entry\n if anyone says 'who are you', says 'I am McLovin'\n if anyone says 'its thursday', sings out of touch\n if anyone says 'its friday night', sends gif of friday night\n if anyone says 'tell me a riddle', says riddle\n if anyone says schnieder's name or any variation, sends hava nagila\n if anyone says 'May I consult The Archives?', brings up series of questions before giving access")
+  nial_words = [
+    "Nigga", 
+    "Nigger", 
+    "Niggas", 
+    "Niggers",  
+    "nigga", 
+    'nigger', 
+    'niggas',
+    'niggers'
+  ]
+  if any(word in msg for word in nial_words):
+    await message.channel.send('Nial')
   jew_words = [
     'Schnieds', 
     'Schnieder', 
@@ -74,7 +86,7 @@ async def on_message(message):
   if any(word in msg for word in jew_words):
     await message.channel.send("https://www.youtube.com/watch?v=vHSNZK4Je-Y&ab_channel=XxMsrSzprzxX")
   if message.content.startswith('May I consult The Archives?'):
-    await message.channel.send("Hmmm.... The Archives? What do you need The Archives for? First you must answer a few questions before you may gain access. First, what is it that all tomboys pack? answer with + then answer, like so: +gamer")
+    await message.channel.send("Hmmm.... The Archives? What do you need The Archives for? First you must answer a few questions before you may gain access. First, what is it that all tomboys pack? answer with + then answer, like so: +gamer or for multiple words, include the space like this: +gamer time")
   if message.content.startswith("+dump truck"):
     await message.channel.send("Congratulations! You have answered the first question correctly! I have now disengaged the first locking mechanism, however your quest is still far from over. The questions are only going to get harder from here. Your next question is this: What song tormented Weikel during the first months of quarantine?")
   question_2_words = [
@@ -86,7 +98,7 @@ async def on_message(message):
     '+Step'
   ]
   if any(word in msg for word in question_2_words):
-    await message.channel.send("Congratulations! You have now answered the second question correctly! The second locking mechanism is now undone, yet your journey for enlightenment is not over yet. The final question is the toughest of all, yet you still want The Archives? Alright then, prove yourself worthy with your final answer: What is the name of Weikel's guitar and why did he name it that?")
+    await message.channel.send("Congratulations! You have now answered the second question correctly! The second locking mechanism is now undone, yet your journey to enlightenment is not over yet. The final question is the toughest of all, yet you still want The Archives? Alright then, prove yourself worthy with your final answer: What is the name of Weikel's guitar and why did he name it that?")
   question_3_words = [
     '+Geeta, from K-On!', 
     '+geeta from k on', 
@@ -95,5 +107,21 @@ async def on_message(message):
   ]
   if any(word in msg for word in question_3_words):
     await message.channel.send("Oh My God. You did it. You actually did it. How did you even know that last one? Weikel never talks about that. But that means the 3rd and final locking mechanism has been disabled. Welcome, my friend, to The Archives. Have a look around, only the finest may enter here. Enjoy your stay. https://pastebin.com/RgSyGvpj")
+  ping_words = [
+    '@McNab#2547', 
+    '@Toastman Tom#5870', 
+    '@SKIEH#6694', 
+    '@PresumedPack890#3201', 
+    '@YaBoySchnieds#3707', 
+    '@kookoomomopants500#3596', 
+    '@deckstein#5959', 
+    '@SlightIncon#7291', 
+    '@Owner of The Archives#7746', 
+    '@Bertram#9737', 
+    '@Anime_Liker_3000', 
+    '@'
+    ]
+  #if any(word in msg for word in ping_words):
+    #await message.channel.send("You fucking retard. You Just tried to ping someone in #general, didn't you. Well too bad, you just triggered me into sending this message, that means you will be banned for violating rule 10. Nice try.")
 keep_alive()
 client.run(os.getenv('TOKEN'))
