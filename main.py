@@ -123,5 +123,21 @@ async def on_message(message):
     ]
   #if any(word in msg for word in ping_words):
     #await message.channel.send("You fucking retard. You Just tried to ping someone in #general, didn't you. Well too bad, you just triggered me into sending this message, that means you will be banned for violating rule 10. Nice try.")
-keep_alive()
+    ira_words = [
+        'IRA', 'ira', 'car bomb', 'Car bomb', 'Ireland', 'ireland', 'Dublin',
+        'dublin'
+    ]
+    if any(word in msg for word in ira_words):
+        await message.channel.send(
+            "https://www.youtube.com/watch?v=OT0yoo9B2Bc&ab_channel=SnorDrake")
+
+    tomboy_words = [
+        "It's Tuesday", "Its Tuesday", "it's Tuesday", "its Tuesday",
+        "It's tuesday", "Its tuesday", "its tuesday", "it's tuesday"
+    ]
+    if any(word in msg for word in tomboy_words):
+        await message.channel.send(
+            "https://cdn.discordapp.com/attachments/669562122799284238/815054400280068096/Tomboy_Tuesday.mp4"
+        )
+    keep_alive()
 client.run(os.getenv('TOKEN'))
