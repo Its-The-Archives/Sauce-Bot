@@ -63,18 +63,6 @@ async def on_message(message):
     await message.channel.send("Destiny? Did someone say Destiny? That game that Sam and Schnieds *still* play? I mean how the **FUCK** can you play the same game for 3000+ hours!? The game isn't even that good anymore. Opulence was the peak of that damn game and you know it. It's just a bullshit game where all the good shit you get gets sent to the Aether a few months from when you get it. The game isn't even original anymore. Might as well call it 'Destiny 1: Remastered' or 'Destiny 1: Deluxe'. Just play a better fucking game already. You know what? It doesn't even have to be a better game at this point. Just play something fucking *different*.")
   if message.content.startswith('+help'):
     await message.channel.send("+help brings up this help screen\n if anyone says 'Destiny', makes fun of Sam and Schnieds\n if anyone says 'macaroni', says with the chicken strips\n if anyone says the n-word, says Nial\n if anyone says 'Sauce?', gives random nhentai entry\n if anyone says 'who are you', says 'I am McLovin'\n if anyone says 'its thursday', sings out of touch\n if anyone says 'its friday night', sends gif of friday night\n if anyone says 'tell me a riddle', says riddle\n if anyone says schnieder's name or any variation, sends hava nagila\n if anyone says 'May I consult The Archives?', brings up series of questions before giving access")
-  nial_words = [
-    "Nigga", 
-    "Nigger", 
-    "Niggas", 
-    "Niggers",  
-    "nigga", 
-    'nigger', 
-    'niggas',
-    'niggers'
-  ]
-  if any(word in msg for word in nial_words):
-    await message.channel.send('Nial')
   jew_words = [
     'Schnieds', 
     'Schnieder', 
